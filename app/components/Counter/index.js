@@ -22,6 +22,11 @@ const Counter = (props) =>
             - ( async )
           </button>
         </div>
+        <div className='block'>
+          <button className='plusBtn' onClick={props.fetchData}>
+            Fetch Data
+          </button>
+        </div>
       </div>
 
 export default Counter;

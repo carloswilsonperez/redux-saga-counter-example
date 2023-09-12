@@ -12,15 +12,16 @@ class App extends Component {
 	}
 
 	render() {
-		const { count, increment, decrement, incrementAsync, decrementAsync } = this.props;
+		const { count, increment, decrement, incrementAsync, decrementAsync, fetchData } = this.props;
 		return(
 			<div>
 				<Counter 
-				count={count} 
-				increment={increment}
-				decrement={decrement}
-				incrementAsync={incrementAsync}
-				decrementAsync={decrementAsync}
+					count={count} 
+					increment={increment}
+					decrement={decrement}
+					incrementAsync={incrementAsync}
+					decrementAsync={decrementAsync}
+					fetchData={fetchData}
 				/>
 			</div>
 		)
@@ -40,6 +41,7 @@ const mapDispatchToProps = (dispatch) => {
 	  decrement: () => dispatch(actions.decrement()),
 	  incrementAsync: () => dispatch(actions.incrementAsync()),
 	  decrementAsync: () => dispatch(actions.decrementAsync()),
+	  fetchData: () => dispatch(actions.fetchData()),
 	}
   }
 
